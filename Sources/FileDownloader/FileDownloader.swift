@@ -50,7 +50,7 @@ public final class FileDownloader: NSObject, @unchecked Sendable {
     
     public func fileURL(for url: URL) -> URL {
         return fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-            .appendingPathComponent("\(FileDownloader.self)", isDirectory: true)
+            .appendingPathComponent("me.libei.FileDownloader", isDirectory: true)
             .appendingPathComponent(url.host!, isDirectory: true)
             .appendingPathComponent(url.path)
     }
